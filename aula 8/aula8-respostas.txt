@@ -1,0 +1,12 @@
+#SELECT titulo FROM noticia;
+#SELECT COUNT(*) FROM jogo;
+#SELECT titulo FROM noticia WHERE DATA LIKE '2023-10-%';
+#SELECT titulo FROM noticia WHERE DATA LIKE '2023-10-%' AND hora BETWEEN "12:00" AND "18:00";
+#SELECT titulo FROM noticia WHERE jogo_id =(SELECT id FROM jogo WHERE nome = "Grand Theft Auto V" AND DATA LIKE "2023-10-%" AND hora BETWEEN "12:00" AND "18:00");
+#select foto_capa from plataforma_jogo where plataforma_id= (select id from plataforma where nome ="Playstation 4");
+#select titulo from noticia where jogo_id =(select id from jogo where nome = "Grand Theft Auto V");
+#SELECT nome FROM jogo WHERE categoria_id in (SELECT id FROM categoria WHERE nome= 'Aventura' OR nome= 'Futebol');
+#select nome from plataforma where id in (select plataforma_id from plataforma_jogo where jogo_id in (select id from jogo where nome = "Diablo III"));
+#select titulo, resumo from noticia where jogo_id in (select id from jogo where categoria_id in (select id from categoria where nome= 'Aventura'));
+#SELECT COUNT(*) FROM jogo WHERE id IN (SELECT jogo_id FROM plataforma_jogo WHERE plataforma_id in ( SELECT id FROM plataforma WHERE nome= "Playstation 4"));
+#SELECT titulo FROM noticia WHERE id IN (SELECT jogo_id FROM plataforma_jogo WHERE plataforma_id in ( SELECT id FROM plataforma WHERE nome= "Xbox One"));
